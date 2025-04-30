@@ -118,7 +118,8 @@ class TicketSerializer(serializers.ModelSerializer):
         Ticket.validate_ticket(
             attrs["row"],
             attrs["seat"],
-            attrs["movie_session"]
+            attrs["movie_session"],
+            serializers.ValidationError
         )
         return data
 
